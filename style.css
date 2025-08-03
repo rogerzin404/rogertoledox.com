@@ -1,0 +1,259 @@
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #ccc;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  min-height: 130vh; /* más alto para cubrir "¿Quién soy?" */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #0a0a0a 90%),
+    url('imagenes/fondo.jpeg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 5rem;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 60px;
+  color: #e50914;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 900;
+  color: #e63737;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px #000;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 26px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-top: -5px;
+}
+
+
+.overlay {
+  text-align: center;
+}
+
+.overlay h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  color: #ff2a2a;
+  text-shadow: 2px 2px 4px #000;
+  margin: 0;
+  z-index: 2;
+}
+
+
+
+.overlay {
+  text-align: center;
+}
+
+.overlay h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  color: #ff2a2a;
+  margin: 0;
+  text-shadow: 2px 2px 4px #000;
+}
+
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
+  z-index: 1;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #000), url('imagenes/fondo.jpeg');
+  background-size: cover;
+  background-position: center top;
+  z-index: -1;
+}
+
+.hero-title {
+  font-family: 'Anton', sans-serif;
+  color: #ff2a2a;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3.5rem;
+  color: #ff2a2a;
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+
+.quien-soy {
+  padding: 4rem 2rem;
+  background-color: transparent;
+  color: #f1f1f1;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quien-soy h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  color: #ff2a2a;
+  margin-bottom: 2rem;
+}
+
+.quien-soy .abismo {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.4rem;
+  color: #ff2a2a;
+  margin-top: 2rem;
+  text-shadow: 1px 1px 4px #000;
+}
+
+
+/* Productos */
+.productos {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), #111);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.productos h2 {
+  color: #ff2a2a;
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.producto-box {
+  border: 2px solid #ff2a2a;
+  padding: 1rem;
+  width: 250px;
+  background-color: #000;
+  transition: transform 0.3s;
+}
+
+.producto-box:hover {
+  transform: scale(1.05);
+}
+
+.producto-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ff2a2a;
+  margin-bottom: 1rem;
+}
+
+.producto-box h3 {
+  color: #ff2a2a;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.producto-box p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0.5rem 0 0;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.cta a {
+  background-color: #e50914;
+  color: #fff;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cta a:hover {
+  background-color: #c40812;
+  transform: translateY(-2px);
+}
+
+.cierre-venta {
+  font-family: 'Anton', sans-serif;
+  color: #ff2e2e;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 3px black;
+  letter-spacing: 1px;
+}
+
+.prueba-social {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #d4af37; /* Dorado elegante */
+  text-align: center;
+  margin: 60px auto;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px #000;
+  max-width: 900px;
+  padding: 0 20px;
+  line-height: 1.6;
+}
