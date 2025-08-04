@@ -12,7 +12,7 @@ body {
   position: relative;
   min-height: 130vh; /* más alto para cubrir "¿Quién soy?" */
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #0a0a0a 90%),
-    url('imagenes/fondo.jpeg');
+    url('fondo.jpeg');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #000), url('imagenes/fondo.jpeg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #000), url('fondo.jpeg');
   background-size: cover;
   background-position: center top;
   z-index: -1;
@@ -257,3 +257,4 @@ body {
   padding: 0 20px;
   line-height: 1.6;
 }
+
