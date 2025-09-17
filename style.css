@@ -1,0 +1,258 @@
+/* =========================
+   RESET & BASE
+========================= */
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body {
+  font-family:'Roboto', sans-serif;
+  background-color:#000;
+  color:#ccc;
+  line-height:1.5;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+a { color:inherit; text-decoration:none; }
+.container { max-width:1200px; margin:0 auto; padding:0 1rem; }
+
+/* =========================
+   HEADER
+========================= */
+.site-header{
+  position:sticky; top:0; z-index:1000;
+  background:rgba(0,0,0,.85);
+  backdrop-filter: blur(4px);
+  border-bottom:1px solid #111;
+}
+.site-header .container{
+  display:flex; align-items:center; justify-content:space-between;
+  min-height:64px;
+}
+.brand{
+  color:#fff; font-family:'Anton',sans-serif; letter-spacing:.5px; font-size:1.1rem;
+}
+
+/* Nav */
+.main-nav a{ color:#bbb; font-weight:600; margin:0 .75rem; }
+.main-nav a:hover{ color:#ff2a2a; }
+
+/* Hamburger */
+.hamburger{ display:none; background:transparent; border:0; width:36px; height:28px; gap:6px; flex-direction:column; justify-content:center; }
+.hamburger span{ display:block; height:3px; background:#fff; border-radius:3px; }
+
+/* =========================
+   HERO
+========================= */
+.hero{
+  position:relative; min-height:90vh; text-align:center;
+  display:flex; align-items:center; justify-content:center;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,.75) 60%, #000 100%),
+    url('fondo.jpeg');
+  background-size:cover; background-position:center top; background-repeat:no-repeat;
+}
+.overlay{ position:relative; z-index:2; padding:2rem 1rem; }
+.hero-title{
+  font-family:'Anton',sans-serif; font-size:3.25rem; color:#ff2a2a; letter-spacing:2px;
+  text-shadow:2px 2px 10px rgba(0,0,0,.8); margin:0 0 .5rem;
+}
+.hero-subtitle{
+  font-size:1.25rem; color:#fff; max-width:840px; margin:0 auto 1rem;
+  text-shadow:2px 2px 4px rgba(0,0,0,.8);
+}
+.hero-ctas{ margin-top:1rem; display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; }
+
+/* Botones */
+.btn{ display:inline-block; padding:.9rem 1.2rem; border-radius:10px; font-weight:800; }
+.btn-primary{ background:#e50914; color:#fff; box-shadow:0 6px 18px rgba(229,9,20,.35); }
+.btn-primary:hover{ background:#c40812; }
+.btn-outline{ border:2px solid #ff2a2a; color:#ff2a2a; }
+.btn-outline:hover{ background:#ff2a2a; color:#000; }
+.btn-xl{ padding:1.1rem 1.6rem; font-size:1.1rem; }
+
+/* =========================
+   SOBRE MÍ
+========================= */
+.section-title{
+  color:#ff2a2a; font-family:'Anton',sans-serif; text-align:center; margin:0 0 1rem; font-size:2rem;
+}
+.quien-soy{ padding:3.5rem 1rem; color:#f1f1f1; }
+.sm-wrapper{
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:360px 1fr; gap:1.5rem; align-items:center;
+}
+.sm-photo{
+  width:360px; height:360px; border-radius:999px;
+  background:url('fondo.jpeg') center/cover no-repeat;
+  border:3px solid #ff2a2a;
+}
+.sm-copy p{ color:#ddd; margin:.6rem 0; font-size:1.05rem; line-height:1.8; }
+
+/* Frases doradas */
+.prueba-social{
+  font-family:'Cinzel', serif; font-size:22px; color:#d4af37; text-align:center;
+  margin:30px auto; letter-spacing:1px; text-shadow:1px 1px 3px #000;
+  max-width:900px; padding:0 20px; line-height:1.6;
+}
+
+/* =========================
+   EMAILS DIARIOS
+========================= */
+.emails-diarios{
+  padding:3rem 1rem; text-align:center;
+  background:linear-gradient(180deg,#0a0a0a,#000);
+}
+.emails-diarios h2{ color:#fff; font-family:'Anton',sans-serif; margin:0 0 .5rem; }
+.emails-diarios .gratis{ color:#ff2a2a; }
+.emails-diarios p{ color:#bbb; margin:.5rem 0 1rem; }
+
+/* =========================
+   PRODUCTOS
+========================= */
+.ruta-transformacion{ padding:3rem 1rem; text-align:center; }
+.ruta-transformacion h2{ color:#ff2a2a; font-family:'Anton',sans-serif; margin:0 0 1.5rem; }
+.ruta-grid{
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1rem;
+}
+.ruta-card{
+  background:#0b0b0b; border:1px solid #191919; border-radius:14px; padding:1.25rem;
+  display:flex; flex-direction:column; justify-content:space-between; align-items:center;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.ruta-card:hover{ transform:translateY(-3px); box-shadow:0 10px 24px rgba(0,0,0,.35); }
+.ruta-card h3{ color:#fff; margin:.5rem 0 .35rem; font-size:1.1rem; text-align:center; }
+.ruta-card p{ color:#bdbdbd; margin:0 0 .9rem; font-size:.95rem; text-align:center; }
+
+/* Imagen de producto */
+.ruta-card img{
+  width:100%;
+  max-width:250px;
+  height:330px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+  display:block;
+}
+
+/* =========================
+   AGENDA
+========================= */
+.agenda{ padding:3.5rem 1rem; }
+.agenda-lede{
+  text-align:center; color:#cfcfcf; max-width:900px; margin:0 auto 1.5rem;
+}
+.agenda-grid{
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1rem;
+}
+.agenda-card{
+  background:#0b0b0b; border:1px solid #191919; border-radius:16px; overflow:hidden;
+  display:flex; flex-direction:column;
+}
+.agenda-figure{ position:relative; }
+.agenda-figure img{ width:100%; height:220px; object-fit:cover; display:block; }
+.agenda-badge{
+  position:absolute; top:10px; left:10px; padding:.35rem .6rem; border-radius:999px;
+  font-weight:800; font-size:.8rem; background:#222; color:#ddd; border:1px solid #444;
+}
+.agenda-badge--next{ background:#e50914; color:#fff; border-color:#e50914; }
+.agenda-body{ padding:1rem; }
+.agenda-body h3{ color:#fff; margin:.25rem 0 .15rem; font-size:1.1rem; }
+.agenda-meta{ color:#aaa; margin:0 0 .4rem; font-size:.95rem; }
+.agenda-talk{ color:#cfcfcf; margin:0 0 .8rem; }
+.agenda-cta{ width:100%; text-align:center; }
+
+.done .agenda-figure img{ filter:grayscale(.15); }
+.done .agenda-badge{ background:#0f0f0f; color:#bbb; border-color:#333; }
+
+.agenda-footnote{
+  text-align:center; color:#999; margin:1rem auto 0; font-size:.95rem;
+}
+
+/* =========================
+   TESTIMONIOS
+========================= */
+.testimonios{ padding:3rem 1rem; text-align:center; background:#050505; }
+.testimonios h2{ color:#ff2a2a; font-family:'Anton',sans-serif; margin:0 0 1.5rem; }
+.testi-grid{
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;
+}
+.testi-card{ background:#0b0b0b; border:1px solid #191919; border-radius:14px; padding:1.25rem; color:#ddd; }
+.testi-name{ display:block; margin-top:.75rem; color:#ff2a2a; font-weight:700; }
+
+/* =========================
+   CIERRE FINAL
+========================= */
+.cta-final{
+  text-align:center; padding:3.5rem 1rem;
+  background:radial-gradient(30% 60% at 50% 0%, rgba(229,9,20,.15), transparent), #000;
+}
+.cta-final h2{ color:#fff; font-family:'Anton',sans-serif; margin:0 0 1rem; }
+
+/* CTA STICKY (móvil) */
+.cta-sticky{ display:none; }
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+  border-top:1px solid #111; background:#000; text-align:center; padding:2rem 1rem;
+}
+.footer-links{
+  display:flex; gap:1rem; justify-content:center; list-style:none; padding:0; margin:0 0 1rem;
+}
+.footer-links a{ color:#888; }
+.footer-links a:hover{ color:#fff; }
+
+/* Redes (solo footer, íconos) */
+.social-icons{ list-style:none; display:flex; gap:1.2rem; justify-content:center; padding:0; margin:0; align-items:center; }
+.social-icons--footer{ margin-top:.75rem; }
+.social-link{ font-size:22px; color:#ff2a2a; transition:color .2s ease; display:inline-flex; }
+.social-link:hover{ color:#fff; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width:1200px){
+  .agenda-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:1024px){
+  .ruta-grid{ grid-template-columns:repeat(2,1fr); }
+  .sm-wrapper{ grid-template-columns:1fr; }
+  .sm-photo{ margin:0 auto; }
+}
+@media (max-width:768px){
+  .hero-title{ font-size:2.4rem; }
+  .hero-subtitle{ font-size:1.05rem; }
+}
+@media (max-width:640px){
+  .main-nav{ display:none; position:absolute; top:64px; left:0; right:0; background:#000; border-top:1px solid #111; padding:.75rem 1rem; }
+  .main-nav.open{ display:block; }
+  .main-nav a{ display:block; padding:.6rem 0; }
+
+  .ruta-grid{ grid-template-columns:1fr; }
+  .agenda-grid{ grid-template-columns:1fr; }
+
+  .cta-sticky{
+    display:block;
+    position:fixed; left:0; right:0; bottom:0; z-index:999;
+    background:rgba(0,0,0,.92);
+    border-top:1px solid #111; text-align:center; padding:.6rem;
+  }
+}
+
+/* =========================
+   FIXES
+========================= */
+/* Oculta redes arriba y deja solo en footer */
+.site-header .social-icons,
+.site-header .social-icons--header { display: none !important; }
+.footer .social-icons,
+.footer .social-icons--footer { display: flex !important; }
+
+/* =========================
+   INMERSIONES 2026 (base común)
+========================= */
+/* Nota: los estilos específicos de inmersiones (vertical/dorado) y rejilla centrada
+   están en el <style> embebido del index para aislarlos de la agenda general. */
